@@ -1,0 +1,44 @@
+Coding:
+package assigment;
+
+import java.util.Scanner;
+
+public class assigmentB1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int years, LoanAmount;// make sure its output an integer
+		double SimpleIntrest, MonthlyPayment, TotalPayment;//make sure its output a double
+		
+		Scanner scanMe = new Scanner (System.in);// to enter input from user
+		
+		System.out.println("Enter yearly interest rate, for example 3.5: ");
+		SimpleIntrest = scanMe.nextDouble();//use nextDouble for double
+		
+		System.out.println("Enter number of years as an integer, for example 5: ");
+		years = scanMe.nextInt();//use nextInt for int
+		
+		System.out.println("Enter loan amount, for example 3000.00: ");
+		LoanAmount = scanMe.nextInt();
+		
+		MonthlyPayment = SimpleIntrest * 30;// to calculate ammount of  Monthylypayment //30 days for every months
+		TotalPayment = MonthlyPayment * (5 * 12);//to calculate ammount of TotalPayment // 12 because a year consist of 12 months
+		
+		System.out.println("The monthly payment is $" + MonthlyPayment);
+		System.out.println("The total payment is $" + TotalPayment);
+
+	}
+
+}
+
+
+Output:
+Enter yearly interest rate, for example 3.5: 
+3.5
+Enter number of years as an integer, for example 5: 
+5
+Enter loan amount, for example 3000.00: 
+3000
+The monthly payment is 105.0
+The total payment is 6300.0
